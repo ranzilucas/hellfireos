@@ -81,6 +81,7 @@ static void rt_queue_next()
  
 void dispatch_isr(void *arg)
 {
+	//printf("\n dispatch %d ", (uint32_t)_read_us());
 	int32_t rc;
 
 #if KERNEL_LOG >= 1

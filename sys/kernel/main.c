@@ -84,6 +84,8 @@ static void clear_pcb(void)
 
 static void init_queues(void)
 {
+	krnl_pl_queue = hf_queue_create(MAX_TASKS); // add AL
+	if (krnl_pl_queue == NULL) panic(PANIC_OOM); // add AL
 	krnl_run_queue = hf_queue_create(MAX_TASKS);
 	if (krnl_run_queue == NULL) panic(PANIC_OOM);
 	krnl_delay_queue = hf_queue_create(MAX_TASKS);
