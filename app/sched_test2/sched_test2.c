@@ -55,11 +55,11 @@ void polling_server(void){
 			if(hf_queue_count(krnl_pl_queue)){
 					printf("\nFila AP = %d.", hf_queue_count(krnl_pl_queue));
 					
-					if(krnl_task->capacity == 0){
-						hf_kill(hf_selfid());
-					}else{
-						krnl_task->capacity--;
-					}
+					//if(krnl_task->capacity == 0){
+					//	hf_kill(hf_selfid());
+					//}else{
+					//	krnl_task->capacity--;
+					//}
 					
 					krnl_task = hf_queue_remhead(krnl_pl_queue);
 					krnl_current_task = krnl_task->id;

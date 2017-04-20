@@ -14,5 +14,6 @@
 #define PANIC_CANT_SWAP			0x0c
 #define PANIC_NUTS_SEM			0x0d
 #define PANIC_UNKNOWN			0xff
+#define PANIC_CANT_PLACE_PL		0xaa
 
 void panic(int32_t cause);
